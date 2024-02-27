@@ -52,7 +52,7 @@ class CustomTableViewCell: UITableViewCell {
         image.translatesAutoresizingMaskIntoConstraints = false
         return image
     }()
-
+    
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         
@@ -62,26 +62,26 @@ class CustomTableViewCell: UITableViewCell {
         contentView.addSubview(contactImageView)
         contentView.addSubview(secondImageView)
         contentView.addSubview(image3)
-
+        
         NSLayoutConstraint.activate([
             cellView.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 10),
             cellView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 16),
             cellView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -16),
             cellView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -10),
             cellView.heightAnchor.constraint(equalToConstant: 84),
-
+            
             nameLabel.topAnchor.constraint(equalTo: cellView.topAnchor, constant: 8),
             nameLabel.trailingAnchor.constraint(equalTo: cellView.trailingAnchor, constant: -75),
             nameLabel.leadingAnchor.constraint(equalTo: cellView.leadingAnchor, constant: 60),
-
+            
             timeLabel.topAnchor.constraint(equalTo: nameLabel.bottomAnchor, constant: 4),
             timeLabel.leadingAnchor.constraint(equalTo: contactImageView.trailingAnchor, constant: 8),
-
+            
             contactImageView.topAnchor.constraint(equalTo: cellView.topAnchor, constant: 8),
             contactImageView.leadingAnchor.constraint(equalTo: cellView.leadingAnchor, constant: 3),
             contactImageView.widthAnchor.constraint(equalToConstant: 48),
             contactImageView.heightAnchor.constraint(equalToConstant: 48),
-
+            
             secondImageView.topAnchor.constraint(equalTo: cellView.topAnchor, constant: 8),
             secondImageView.trailingAnchor.constraint(equalTo: cellView.trailingAnchor, constant: -15),
             secondImageView.widthAnchor.constraint(equalToConstant: 60),
@@ -93,7 +93,7 @@ class CustomTableViewCell: UITableViewCell {
             image3.widthAnchor.constraint(equalToConstant: 20)
         ])
     }
-
+    
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
